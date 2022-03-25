@@ -1,0 +1,191 @@
+main {
+  margin: 5% 10% 10% 10%;
+}
+
+vh-100 {
+  height: 100vh;
+}
+
+#root {
+  background-color: #fff8f3;
+}
+.black {
+  color: black;
+}
+
+.red {
+  color: red;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+/* Background colors */
+.bgBeige {
+  background-color: #fff8f3;
+}
+.bg-pink {
+  background-color: #fed1ef;
+}
+.bg-white {
+  background-color: white;
+}
+
+/* Basket */
+.checkoutBox {
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+
+/* Button */
+.btn:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+.btnTextColor,
+.btnTextColor:hover {
+  color: white !important;
+}
+
+.btnBgColor {
+  background: black !important;
+}
+.btnBgColor:hover {
+  background: #fd9fde !important;
+}
+
+/* Carousel sizing */
+@media (min-width: 768px) {
+  .carousel-inner {
+    height: 400px;
+  }
+}
+
+/* Cursor pointer */
+.cursorPointer {
+  cursor: pointer;
+}
+
+/* Footer */
+footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Header Form Control */
+.form-control:focus,
+.form-control:active,
+.form-control:hover {
+  box-shadow: none !important;
+  border: 1px solid #fd9fde !important;
+}
+
+/* Icon color */
+.iconTextColor {
+  color: black !important;
+}
+.iconTextColor:hover {
+  color: #fd9fde !important;
+}
+
+/* Images sizing */
+.img {
+  width: 300px;
+  height: 300px;
+}
+@media (max-width: 576px) {
+  .order-img {
+    width: 100px;
+  }
+}
+/* Link */
+.textDecoration {
+  text-decoration: none;
+  color: black;
+}
+
+.textDecoration:hover {
+  color: #fd9fde !important;
+}
+
+/* Sign Logo */
+
+.signLogo {
+  border-radius: 15px;
+}
+
+/* Sign */
+.form-sign {
+  max-width: 350px;
+  height: 500px;
+  padding: 40px 40px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 10px;
+}
+
+.signContainer {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  height: 100vh;
+}
+/* Order box */
+.border-order {
+  border: 1px solid lightgray;
+  border-radius: 2px;
+}
+/* Store cards*/
+.marginContainer {
+  margin-top: 35px;
+}
+
+@media (min-width: 768px) {
+  .marginContainer {
+    margin-top: 100px;
+  }
+}
+
+/*Text for orders section*/
+@media (max-width: 576px) {
+  .order-text {
+    font-size: 10px;
+  }
+}
+
+/********* SIGNUP OFFERS *********/
+
+/* Margin for medium screens onwards */
+@media (min-width: 768px) {
+  .margin-ten {
+    margin: 10%;
+  }
+}
+
+/* Icon color */
+.iconColor {
+  color: #fd9fde !important;
+}
+
+input:focus,
+input:active,
+input:hover {
+  box-shadow: none !important;
+  border: 1px solid #fed1ef !important;
+  outline: #eeeeee;
+}
+
+/* Padding for the sign up section */
+
+@media (min-width: 768px) {
+  .pad-left-50 {
+    margin-left: 50px;
+  }
+  .pad-right-50 {
+    margin-right: 50px;
+  }
+}

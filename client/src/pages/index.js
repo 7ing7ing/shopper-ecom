@@ -1,0 +1,12 @@
+export { default as Home } from "./home";
+export { default as OnePiece } from "./onepiece-store";
+export { default as Kimetsu } from "./kimetsu-store";
+export { default as Titans } from "./titans-store";
+export { default as Naruto } from "./naruto-store";
+export { default as Signin } from "./signin";
+export { default as Signup } from "./signup";
+export { default as Wishlist } from "./wishlist";
+export { default as Cart } from "./cart";
+export { default as Checkout } from "./checkout";
+export { default as Orders } from "./orders";
+export { default as NotFound } from "./notfound";
