@@ -60,7 +60,7 @@ export default function Cart({ user }) {
                   <img
                     src={item.img}
                     className="img-fluid rounded-start"
-                    alt="..."
+                    alt={item.title}
                   />
                 </div>
                 <div className="col-md-8">
