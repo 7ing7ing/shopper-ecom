@@ -8,14 +8,17 @@ import {
   Button,
 } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FirebaseContext } from "../context/firebase";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../reducer/StateProvider";
+import { useNavigate } from "react-router-dom";
 
 export default function Header({ user }) {
   const { firebase } = useContext(FirebaseContext);
   const [{ cart, wishlist }, dispatch] = useStateValue();
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     //Using localStorage to make the state persistent, otherwise, is lost on refresh. Each dispatch in the reducer will modify the localStorage at the same time state is modified.
@@ -50,6 +53,38 @@ export default function Header({ user }) {
     });
   };
 
+  const handleSearch = () => {
+    let naruto = ["naruto"];
+    let onepiece = ["one piece", "onepiece"];
+    let titans = [
+      "titan",
+      "titans",
+      "attack on titans",
+      "attackontitans",
+      "shingeki no kyojin",
+      "shingekinokyojin",
+    ];
+    let kimetsu = [
+      "kimetsu no yaiba",
+      "kimetsunoyaiba",
+      "kimetsu",
+      "demonslayer",
+      "demon slayer",
+      "demon",
+    ];
+    let series = search.toLowerCase();
+    console.log(series);
+    if (naruto.includes(series)) {
+      navigate("/naruto");
+    } else if (onepiece.includes(series)) {
+      navigate("/onepiece");
+    } else if (titans.includes(series)) {
+      navigate("/titans");
+    } else if (kimetsu.includes(series)) {
+      navigate("/demonslayer");
+    }
+  };
+
   return (
     <Navbar className="bg-white" expand="lg">
       <Container fluid className="mx-0 lg-mx-5">
@@ -63,11 +98,16 @@ export default function Header({ user }) {
           <Form className="d-flex flex-grow-1">
             <FormControl
               type="search"
-              placeholder="Search products here"
+              placeholder="Search your anime series here (naruto, one piece, demon slayer, attack on titans)"
               className="me-2"
               aria-label="Search"
+              onChange={({ target }) => setSearch(target.value)}
             />
-            <Button variant="default" className="btn btnTextColor btnBgColor">
+            <Button
+              variant="default"
+              onClick={handleSearch}
+              className="btn btnTextColor btnBgColor"
+            >
               Search
             </Button>
           </Form>
