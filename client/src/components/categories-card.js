@@ -17,7 +17,11 @@ export default function CategoriesCard() {
           >
             <Col>
               <Card>
-                <Card.Img variant="top" src={category.img} />
+                <Card.Img
+                  variant="top"
+                  src={category.img}
+                  alt={category.title}
+                />
                 <Card.Body>
                   <Card.Title className="text-center">
                     {category.title}
