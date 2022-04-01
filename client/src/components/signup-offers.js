@@ -5,9 +5,13 @@ import { useState } from "react";
 
 export default function SignupOffers() {
   const [subscribed, setSubscribed] = useState(false);
-
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
   const handleSignup = () => {
-    setSubscribed(true);
+    if (email.includes("@") && email.includes(".")) {
+      setSubscribed(true);
+    }
+    setError(true);
   };
   return (
     <div className="border margin-ten d-flex flex-column flex-md-row justify-content-center align-items-center bg-white">
@@ -29,7 +33,11 @@ export default function SignupOffers() {
             placeholder="example@email.com"
             className="me-2 w-75 my-3 flex-grow-1 input-lg"
             aria-label="Email"
+            value={email}
+            onChange={({ target }) => setEmail(target.value)}
           />
+          {error && <span className="red mx-3 my-2">Invalid email!</span>}
+
           <Button
             variant="default"
             className="btnTextColor btnBgColor pad-right-50 py-1 mb-4 mb-md-0"
