@@ -24,7 +24,7 @@ Functionalities of this page:
 
 :link:Link:
 
-- https://shopper-ecom.herokuapp.com/
+- https://shopper-ecom-37ovcrun0-7ing7ing.vercel.app/
 
 📝 Comments:
 
